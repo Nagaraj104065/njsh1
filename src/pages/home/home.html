@@ -1,14 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title class="center">HelpCornor</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card *ngFor="let thing of _things">
+  <ion-card-header>
+    {{thing.name}}
+  </ion-card-header>
+  <ion-card-content>
+    {{thing.description}}
+  </ion-card-content>
+</ion-card>
 </ion-content>
